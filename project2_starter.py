@@ -168,8 +168,9 @@ class Warrior(Player):
         """
         Special warrior ability - a powerful attack that does extra damage.
         """
-        # TODO: Implement power strike
-        # Should do significantly more damage than regular attack
+        special_damage = (self.strength * 3) + self.magic
+        print(f"{self.name} used Power Strike! It did {special_damage} damage!")
+        target.take_damage(special_damage)
         pass
 
 class Mage(Player):
