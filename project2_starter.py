@@ -89,9 +89,11 @@ class Character:
         Reduces this character's health by the damage amount.
         Health should never go below 0.
         """
-        # TODO: Implement taking damage
-        # Reduce self.health by damage amount
-        # Make sure health doesn't go below 0
+        self.health -= damage
+        print(f"{self.name} took {damage} damage, your health is {self.health}")
+        if self.health <= 0:
+            self.health = 0
+            print(f"You died!")
         pass
         
     def display_stats(self):
