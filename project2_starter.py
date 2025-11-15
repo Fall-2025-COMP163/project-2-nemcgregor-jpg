@@ -203,9 +203,11 @@ class Mage(Player):
         """
         Special mage ability - a powerful magical attack.
         """
-        # TODO: Implement fireball spell
-        # Should do magic-based damage with bonus
+        special_damage = (self.magic * 2) + self.magic + self.strength
+        print(f"{self.name} used Fireball! It did {special_damage} damage!")
+        target.take_damage(special_damage)
         pass
+
 
 class Rogue(Player):
     """
