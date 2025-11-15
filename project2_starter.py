@@ -128,8 +128,14 @@ class Player(Character):
         Override the parent's display_stats to show additional player info.
         Should show everything the parent shows PLUS player-specific info.
         """
-        # TODO: Call the parent's display_stats method using super()
-        # TODO: Then print additional player info like class and level
+        super().display_stats()
+        print(f"{self.name}'s stats --->")
+        print(f"{self.name}'s class is: {self.character_class}")
+        print(f"{self.name}'s strength is: {self.strength}")
+        print(f"{self.name}'s health is: {self.health}")
+        print(f"{self.name}'s magic is: {self.magic}")
+        print(f"{self.name}'s level is: {self.level}")
+        print(f"{self.name} has {self.experience} experience points.")
         pass
 
 class Warrior(Player):
