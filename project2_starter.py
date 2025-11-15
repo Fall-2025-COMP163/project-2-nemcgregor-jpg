@@ -1,15 +1,15 @@
 """
 COMP 163 - Project 2: Character Abilities Showcase
-Name: [Your Name Here]
-Date: [Date]
+Name: Noble McGregor
+Date: 11/11/25
 
-AI Usage: [Document any AI assistance used]
-Example: AI helped with inheritance structure and method overriding concepts
+AI Usage: AI helped me in this project on understanding concepts such as super(), AI also allowed the great and formatted creation of the read me
 """
 
 # ============================================================================
 # PROVIDED BATTLE SYSTEM (DO NOT MODIFY)
 # ============================================================================
+import random
 
 class SimpleBattle:
     """
@@ -59,10 +59,13 @@ class Character:
     This is the top of our inheritance hierarchy.
     """
     
-    def __init__(self, name, health, strength, magic):
-        """Initialize basic character attributes"""
-        # TODO: Set the character's name, health, strength, and magic
-        # These should be stored as instance variables
+    def __init__(self, name, health, strength, magic):      
+        self.name = name
+        self.health = health
+        self.strength = strength
+        self.magic = magic
+        self.weapon = None
+        
         pass
         
     def attack(self, target):
