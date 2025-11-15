@@ -247,8 +247,10 @@ class Rogue(Player):
         """
         Special rogue ability - guaranteed critical hit.
         """
-        # TODO: Implement sneak attack
-        # Should always do critical damage
+        critical = random.randint(1, 10)
+        special_damage = (self.strength + self.magic) * (critical)
+        print(f"{self.name} used Sneak Attack! It did {special_damage} damage!")
+        target.take_damage(special_damage)
         pass
 
 class Weapon:
@@ -261,15 +263,19 @@ class Weapon:
         """
         Create a weapon with a name and damage bonus.
         """
-        # TODO: Store weapon name and damage bonus
+        self.name = name
+        self.damage_bonus = damage_bonus
         pass
         
     def display_info(self):
         """
         Display information about this weapon.
         """
-        # TODO: Print weapon name and damage bonus
+
+        print(f"Weapon: {self.name}, Damage Bonus: {self.damage_bonus}")
         pass
+        
+    
 
 # ============================================================================
 # MAIN PROGRAM FOR TESTING (YOU CAN MODIFY THIS FOR TESTING)
