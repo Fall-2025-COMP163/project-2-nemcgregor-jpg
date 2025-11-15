@@ -76,9 +76,12 @@ class Character:
         2. Apply damage to the target
         3. Print what happened
         """
-        # TODO: Implement basic attack
-        # Damage should be based on self.strength
-        # Use target.take_damage(damage) to apply damage
+        damage = self.strength + self.magic 
+        if self.weapon:
+            damage += self.weapon.damage_bonus
+        
+        print(f"{self.name} attacked {target.name}, {self.name} did {damage} to target!")  
+        target.take_damage(damage)
         pass
         
     def take_damage(self, damage):
